@@ -36,7 +36,7 @@ final class Presets {
             "copyAnswerText", "shareAnswerText", "readingHistory", "bookmarks", "translateAnswerText", "readAloud",
             "wordCount", "enableTextSelection", "disableVideoAutoplay", "dataSaverOnWifi",
             "openLinksInBrowser", "disableTabPrefetching", "disableSignInPrompts", "blockPromotionalNotifications",
-            "filterUpdates"));
+            "filterUpdates", "updateNotice"));
 
     /**
      * For reading: the clean feed, plus whole answers, more space, no numbers or credentials, and
@@ -53,7 +53,7 @@ final class Presets {
     /** Ads and privacy only: everything you see is as in the official app, without ads. */
     static final Set<String> ADS_ONLY = new HashSet<>(Arrays.asList(
             "removeAds", "disableTabPrefetching", "disableSignInPrompts", "blockPromotionalNotifications",
-            "filterUpdates"));
+            "filterUpdates", "updateNotice"));
 
     private Presets() {
     }

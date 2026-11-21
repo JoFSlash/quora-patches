@@ -32,7 +32,8 @@ The privacy patches are on by default. Everything else is off until you pick it.
 - **New patches:** a new version of these patches comes out on a Thursday, every other week, so you don't
   have to patch the app again each week. A fix for something broken comes out the same week. To get new patches on Monday already, turn on **Pre-release patches** for this source
   in Morphe Manager; pre-releases are less tested, and you can turn it off again at any time. Morphe Manager then marks the patched app with an Update badge. Patch the same Quora file again and install it over the patched app. No need to uninstall:
-  you stay signed in and your patch settings stay.
+  you stay signed in and your patch settings stay. With **Update notice** patched in (on by default), Patch settings
+  shows the version you have and whether newer patches are out; nothing pops up.
 - **New Quora version:** the patched app doesn't update from the Play Store. Wait until a release of these
   patches lists the new version as supported, then patch that version the same way.
 - **Quora stops accepting your version:** Quora then shows "Upgrade Needed" with a button to Google Play,
@@ -43,8 +44,9 @@ The privacy patches are on by default. Everything else is off until you pick it.
 
 Most patches and their options (text size, tabs, font, how old is too old) can be changed in the app without
 patching again: open **Settings > Morphe > Quora patches**, or long-press the **Home** tab. The same page has a
-search field, edits the keyword and author filters, backs up your settings as text, and tells you when Quora has
-changed its pages in a way that breaks some patches.
+search field, edits the keyword and author filters, backs up your settings as text, tells you when Quora has
+changed its pages in a way that breaks some patches, and counts what the patches hid in the last 7 days (ads, AI
+answers, Quora+ answers, suggestions and your filters; the counts stay on your phone).
 
 On the first start after patching, the app offers four presets: **Everything you patched**, **Clean feed** (no
 ads, AI answers, promotions or suggestions, but answers and the app look as usual), **For reading** (the clean feed
@@ -56,7 +58,8 @@ another one any time under **More > Presets**.
 It also keeps your lists, each with a search field and **Copy as text**:
 
 - **History**: the answers, posts and questions you opened (Reading history).
-- **Bookmarks**: the answers and posts you saved with the bookmark button under them. Long-press one to remove it.
+- **Bookmarks**: the answers and posts you saved with the bookmark button under them, with their text and pictures
+  to read without internet. Long-press one to remove it.
 - **Dismissed questions**: questions you marked "Not interested in this question" (Hide dismissed questions).
 
 **Report a problem** copies the Quora and Android versions, the patches you have on and the page check, then opens
@@ -115,7 +118,7 @@ What the feed and question pages show.
 
 | Patch | Default | What it does |
 | --- | --- | --- |
-| Block authors and Spaces | off | Hides answers and posts by the people and Spaces you pick. Options: Authors and Spaces. |
+| Block authors and Spaces | on | Hides answers and posts by the people and Spaces you pick. Long-press a name in the feed to add it. Options: Authors and Spaces. |
 | Filter keywords | off | Hides answers, posts and questions that mention words you pick. Options: Keywords. |
 | Hide AI answers | on | Hides answers written by Poe bots. |
 | Hide ask box | on | Hides the "What do you want to ask or share?" box with Ask, Answer and Post at the top of the feed. |

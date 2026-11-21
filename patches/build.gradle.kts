@@ -21,6 +21,27 @@ dependencies {
     patchListGeneratorClasspath(libs.gson)
 }
 
+// PATCHES_VERSION, the version these patches are built as, for the Update notice patch. The release
+// sets the version in gradle.properties before it builds.
+val generatePatchesVersion = tasks.register("generatePatchesVersion") {
+    val out = layout.buildDirectory.dir("generated/patchesVersion")
+    val patchesVersion = project.version.toString()
+    inputs.property("version", patchesVersion)
+    outputs.dir(out)
+    doLast {
+        val file = out.get().file("app/jofslash/patches/quora/shared/PatchesVersion.kt").asFile
+        file.parentFile.mkdirs()
+        file.writeText(
+            "package app.jofslash.patches.quora.shared\n\n" +
+                "internal const val PATCHES_VERSION = \"$patchesVersion\"\n"
+        )
+    }
+}
+
+kotlin.sourceSets.named("main") {
+    kotlin.srcDir(generatePatchesVersion)
+}
+
 tasks {
     register<JavaExec>("generatePatchesList") {
         description = "Build patch with patch list"

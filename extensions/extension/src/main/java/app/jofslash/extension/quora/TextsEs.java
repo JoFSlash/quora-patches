@@ -172,7 +172,6 @@ final class TextsEs {
         m.put("Items you already opened, when they come back.", "Elementos que ya abriste, cuando vuelven a aparecer.");
         m.put("Answers older than the years set below.", "Respuestas más antiguas que el plazo indicado abajo.");
         m.put("Items that mention your keywords (see Filters).", "Elementos que mencionan tus palabras clave (ver Filtros).");
-        m.put("Items from the people and Spaces in Filters.", "Elementos de las personas y Spaces indicados en Filtros.");
         m.put("Upvote, view, comment and share numbers.", "Contadores de votos positivos, vistas, comentarios y veces compartidas.");
         m.put("The downvote button.", "El botón de voto negativo.");
         m.put("\"123 comments from … and more\" rows.", "Filas «123 comments from … and more».");
@@ -266,8 +265,6 @@ final class TextsEs {
         m.put("Couldn't save the file.", "No se pudo guardar el archivo.");
         // Presets.
         m.put("Presets", "Ajustes predefinidos");
-        m.put("Switch many patches at once: everything, a clean feed, or ads only.",
-                "Cambia muchos parches a la vez: todo, un feed limpio o solo anuncios.");
         m.put("Quora patches are on", "Los parches de Quora están activos");
         m.put("Change them any time in Settings > Morphe, or by long-pressing the Home tab.",
                 "Cámbialos cuando quieras en Settings > Morphe o manteniendo pulsada la pestaña Home.");
@@ -297,5 +294,33 @@ final class TextsEs {
         m.put("For reading", "Para leer");
         m.put("A clean feed, whole answers with more space, no numbers, and bars that hide while you read.",
                 "Un feed limpio, respuestas completas con más espacio, sin números y barras que se ocultan mientras lees.");
+        // Update notice.
+        m.put("Switch many patches at once: everything, a clean feed, for reading, or ads only.",
+                "Cambia muchos parches a la vez: todo, un feed limpio, para leer o solo anuncios.");
+        m.put("Patches ", "Parches ");
+        m.put("A newer version is out: ", "Hay una versión más nueva: ");
+        m.put("the newest.", "la más reciente.");
+        m.put("Get the new version", "Obtener la nueva versión");
+        m.put("What's new, and how to patch again.", "Novedades y cómo volver a parchear.");
+        // Block an author with a long press.
+        m.put("Items from the people and Spaces in Filters. Long-press a name to add it.",
+                "Publicaciones de las personas y Espacios de Filtros. Mantén pulsado un nombre para añadirlo.");
+        m.put("Hide everything by ", "Ocultar todo de ");
+        m.put("Their answers and posts won't show in the feed or on question pages. You can remove the name again in Patch settings > More > Filters.",
+                "Sus respuestas y publicaciones no se mostrarán en el feed ni en las páginas de preguntas. Puedes quitar el nombre en Patch settings > Más > Filtros.");
+        m.put("hidden.", "oculto.");
+        // Hidden counts.
+        m.put("Hidden in the last 7 days: ", "Ocultado en los últimos 7 días: ");
+        m.put("Ads", "Anuncios");
+        m.put("AI answers", "Respuestas de IA");
+        m.put("Quora+ answers", "Respuestas de Quora+");
+        m.put("Suggestions", "Sugerencias");
+        m.put("Your filters", "Tus filtros");
+        // Offline pictures.
+        m.put("Saved as text with its pictures: links and formatting aren't kept.",
+                "Guardado como texto con sus imágenes: no se guardan los enlaces ni el formato.");
+        // Update notice, settings line only.
+        m.put("Shows here when newer patches are out, from GitHub once a day.",
+                "Muestra aquí cuando salen parches nuevos, desde GitHub una vez al día.");
     }
 }

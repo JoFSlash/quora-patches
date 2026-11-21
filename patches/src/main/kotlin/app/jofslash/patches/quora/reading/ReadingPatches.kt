@@ -55,10 +55,11 @@ private fun readingOptionPatch(
     optionDescription: String,
     optionDefault: String,
     optionValues: Map<String, String>? = null,
+    patchDefault: Boolean = false,
 ) = bytecodePatch(
     name = name,
     description = description,
-    default = false
+    default = patchDefault
 ) {
     category(patchCategory)
     compatibleWith(COMPATIBILITY_QUORA)
@@ -102,12 +103,14 @@ val filterKeywordsPatch = readingOptionPatch(
 val blockAuthorsPatch = readingOptionPatch(
     name = "Block authors and Spaces",
     patchCategory = "Feed",
-    description = "Hides answers and posts by the people and Spaces you pick.",
+    description = "Hides answers and posts by the people and Spaces you pick. Long-press a name in the feed to add it.",
     extensionMethod = "blockAuthors",
     optionKey = "authors",
     optionTitle = "Authors and Spaces",
     optionDescription = "Names as Quora shows them, separated by commas. Example: Jane Doe, Cats of Quora",
     optionDefault = "",
+    // On: it hides nothing until you add a name, and the long press to add one needs it.
+    patchDefault = true,
 )
 
 @Suppress("unused")

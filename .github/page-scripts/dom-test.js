@@ -318,7 +318,31 @@ async function bookmarkCheck() {
   w.close();
 }
 
-bookmarkCheck().then(() => {
+// Hidden counts: an ad the ads stylesheet hides and a feed item a filter hid count once each; the
+// ad's inner parts and a shown item don't count.
+async function statsCheck() {
+  const dom = new JSDOM(`<!doctype html><html><head>
+    <style id="jofslash-remove-ads">.dom_annotate_multifeed_bundle_AdBundle{display:none !important;}</style></head><body>
+    <div class="q-box dom_annotate_multifeed_bundle_AdBundle"><div class="dom_annotate_multifeed_bundle_AdBundle">inner</div></div>
+    <div class="q-box dom_annotate_multifeed_bundle_AnswersBundle" data-jofslash-filtered style="display:none">filtered</div>
+    <div class="q-box dom_annotate_multifeed_bundle_AnswersBundle" id="shown">shown</div>
+    </body></html>`, { runScripts: 'outside-only', pretendToBeVisual: true });
+  const w = dom.window;
+  const sent = [];
+  w.JoFSlashBridge = { countHidden: (key, json) => sent.push(JSON.parse(json)) };
+  w.eval(fs.readFileSync(path.join(dir, 'onPageFinished-0.js'), 'utf8'));
+  const total = (kind) => sent.reduce((n, s) => n + (s[kind] || 0), 0);
+  checks++;
+  if (total('ads') !== 1 || total('filters') !== 1) fail(`onPageFinished-0.js (hidden counts): sent ${JSON.stringify(sent)}, want ads 1 and filters 1`);
+  // A filter hides another item later: it counts once more, the old ones don't count again.
+  w.document.getElementById('shown').setAttribute('data-jofslash-filtered', '');
+  await new Promise((r) => setTimeout(r, 1800));
+  checks++;
+  if (total('ads') !== 1 || total('filters') !== 2) fail(`onPageFinished-0.js (hidden counts): after another filtered item sent ${JSON.stringify(sent)}`);
+  w.close();
+}
+
+bookmarkCheck().then(statsCheck).then(() => {
   console.log(`${checks} DOM checks, ${failures} failure(s)`);
   process.exit(failures ? 1 : 0);
 });

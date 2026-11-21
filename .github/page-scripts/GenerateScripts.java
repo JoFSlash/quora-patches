@@ -19,6 +19,7 @@ public final class GenerateScripts {
             "app.jofslash.extension.quora.HideContentPatch",
             "app.jofslash.extension.quora.ReadingPatch",
             "app.jofslash.extension.quora.RemoveAdsPatch",
+            "app.jofslash.extension.quora.HiddenStats",
     };
 
     public static void main(String[] args) throws Exception {

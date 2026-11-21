@@ -2,7 +2,9 @@ name: Feed test
 
 # Signs in to Quora with a test account in the patched app on an emulator and checks the page
 # patches on the real feed and on an answer: the ask box is hidden, no promoted items, Copy and
-# Share text buttons under answers, the bookmark button and the app's bookmark list.
+# Share text buttons under answers, the bookmark button and the app's bookmark list. It also counts
+# every Quora class name the patches use (dom_annotate_*, puppeteer_test_*) on both pages and lists
+# them in the job summary; the ones the app's page check relies on must be there.
 #
 # The weekly release (release.yml) runs it first and releases only when it passes; it also runs by
 # hand. Not on pull requests or daily: frequent sign-ins from new emulators could get the test

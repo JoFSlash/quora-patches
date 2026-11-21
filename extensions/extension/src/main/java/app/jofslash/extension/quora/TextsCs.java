@@ -172,7 +172,6 @@ final class TextsCs {
         m.put("Items you already opened, when they come back.", "Už otevřené položky, když se znovu objeví.");
         m.put("Answers older than the years set below.", "Odpovědi starší než počet let nastavený níže.");
         m.put("Items that mention your keywords (see Filters).", "Položky s tvými klíčovými slovy (viz Filtry).");
-        m.put("Items from the people and Spaces in Filters.", "Položky od lidí a Spaces z Filtrů.");
         m.put("Upvote, view, comment and share numbers.", "Počty upvotů, zobrazení, komentářů a sdílení.");
         m.put("The downvote button.", "Tlačítko downvote.");
         m.put("\"123 comments from … and more\" rows.", "Řádky „123 comments from … and more“.");
@@ -266,8 +265,6 @@ final class TextsCs {
         m.put("Couldn't save the file.", "Soubor se nepodařilo uložit.");
         // Presets.
         m.put("Presets", "Předvolby");
-        m.put("Switch many patches at once: everything, a clean feed, or ads only.",
-                "Přepni hodně patchů najednou: vše, čistý feed nebo jen reklamy.");
         m.put("Quora patches are on", "Patche pro Quoru jsou zapnuté");
         m.put("Change them any time in Settings > Morphe, or by long-pressing the Home tab.",
                 "Kdykoli je změníš v Settings > Morphe nebo dlouhým podržením karty Home (domeček dole).");
@@ -297,5 +294,33 @@ final class TextsCs {
         m.put("For reading", "Na čtení");
         m.put("A clean feed, whole answers with more space, no numbers, and bars that hide while you read.",
                 "Čistý feed, celé odpovědi s více místem, bez čísel a lišty, které se při čtení schovají.");
+        // Update notice.
+        m.put("Switch many patches at once: everything, a clean feed, for reading, or ads only.",
+                "Přepni hodně patchů najednou: vše, čistý feed, na čtení nebo jen reklamy.");
+        m.put("Patches ", "Patche ");
+        m.put("A newer version is out: ", "Vyšla novější verze: ");
+        m.put("the newest.", "nejnovější.");
+        m.put("Get the new version", "Získat novou verzi");
+        m.put("What's new, and how to patch again.", "Co je nového a jak znovu napatchovat.");
+        // Block an author with a long press.
+        m.put("Items from the people and Spaces in Filters. Long-press a name to add it.",
+                "Příspěvky lidí a Prostorů z Filtrů. Jméno přidáš dlouhým podržením.");
+        m.put("Hide everything by ", "Skrýt vše od ");
+        m.put("Their answers and posts won't show in the feed or on question pages. You can remove the name again in Patch settings > More > Filters.",
+                "Jejich odpovědi a příspěvky se nezobrazí ve feedu ani na stránkách otázek. Jméno můžeš znovu odebrat v Patch settings > Další > Filtry.");
+        m.put("hidden.", "skryto.");
+        // Hidden counts.
+        m.put("Hidden in the last 7 days: ", "Skryto za posledních 7 dní: ");
+        m.put("Ads", "Reklamy");
+        m.put("AI answers", "AI odpovědi");
+        m.put("Quora+ answers", "Odpovědi Quora+");
+        m.put("Suggestions", "Návrhy");
+        m.put("Your filters", "Tvoje filtry");
+        // Offline pictures.
+        m.put("Saved as text with its pictures: links and formatting aren't kept.",
+                "Uloženo jako text i s obrázky: odkazy a formátování se neukládají.");
+        // Update notice, settings line only.
+        m.put("Shows here when newer patches are out, from GitHub once a day.",
+                "Ukáže tady, když vyjdou novější patche, z GitHubu jednou denně.");
     }
 }

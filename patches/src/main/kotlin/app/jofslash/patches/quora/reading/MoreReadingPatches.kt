@@ -153,7 +153,7 @@ val fullscreenReadingPatch = bytecodePatch(
 val bookmarksPatch = bytecodePatch(
     name = "Bookmarks",
     description = "Adds a bookmark button next to Share under an open answer or post, to read it later. " +
-            "Saved items are listed under Bookmarks in Patch settings with their text, which you can read " +
+            "Saved items are listed under Bookmarks in Patch settings with their text and pictures, which you can read " +
             "without internet. Everything stays on your phone.",
     default = true
 ) {
